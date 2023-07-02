@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Poppins:ital,wght@0,300;0,400;0,600;1,200;1,300&family=Raleway:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+main{
+    flex: 1;
+}
+
+header, main{
+    padding: 1rem;
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+    width: 50%;
+    margin: auto;
+    padding: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+}
+
+form>div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+form>h3{
+    padding-bottom: 3rem;
+}
+
+::placeholder{
+    color: #878787;
+}
+
+form > div > button{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+input{
+    padding: 1rem 2rem;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #b4babe;
+    outline: none;
+    transition: all .2s ease;
+    font-size: 1rem;
+}
+
+input:focus{
+    border-color:#27374D;
+}
+
+form button{
+    padding: 1rem 2rem;
+    border: none;
+    background-color: #9681EB;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color:#ffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .5s ease;
+    outline: none;
+}
+
+label{
+    line-height: 3rem;
+    position: relative;
+}
+
+label::after{
+    content: "*";
+    font-size: 2rem;
+    color: rgb(246, 70, 70);
+    position: absolute;
+}
+
+form button:hover, form button:focus{
+    background-color: #6527BE;
+}
+
+.result-section{
+    margin: 5rem auto;
+    width: 50%;
+    background-color: #6527BE;
+    padding: 2rem;
+    color: #ffff;
+}
+
+.result-section p{
+    margin-bottom: 1rem;
+}

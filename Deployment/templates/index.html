@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>3D Printer Material Detection</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>3D Printer Material Type Prediction</h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="{{ url_for('predict')}}"method="post">
+                    <h3>Please fill in the required fields</h3>
+                    <div>
+                        <label> Layer Height </label> <input type="text" name="layer_height" placeholder="layer_height" required="required" />
+                        <label> Wall Thickness </label> <input type="text" name="wall_thickness" placeholder="wall_thickness" required="required" />
+                        <label> Infill Density </label> <input type="text" name="infill_density" placeholder="infill_density" required="required" />
+                        <label> Infill Pattern </label> <input type="text" name="infill_pattern" placeholder="infill_pattern" required="required" />
+                        <label> Nozzle Temperature </label> <input type="text" name="nozzle_temperature" placeholder="nozzle_temperature" required="required" />
+                        <label> Bed Temperature </label> <input type="text" name="Bed_temperature" placeholder="Bed_temperature" required="required" />
+                        <label> Print Speed </label> <input type="text" name="Print_speed" placeholder="Print_speed" required="required" />
+                        <label> Fan Speed </label> <input type="text" name="Fan_speed" placeholder="Fan_speed" required="required" />
+                        <label> Roughness </label> <input type="text" name="Roughness" placeholder="Roughness" required="required" />
+                        <label> Tension Strength </label> <input type="text" name="Tension_strenght" placeholder="Tension_strenght" required="required" />
+                        <label> Elongation </label> <input type="text" name="Elongation" placeholder="Elongation" required="required" />
+                        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="result-section">
+            <p>
+                Result:
+            </p>
+
+            <h1>
+                {{ prediction_text }}
+            </h1>
+        </section>
+
+    </main>
+</body>
+</html>
